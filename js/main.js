@@ -107,14 +107,17 @@ function renderProductDetail(p) {
     <div class="prod-detail-imgs">
       <div class="prod-detail-main-img" style="background:${p.color}20;">
         <div class="prod-detail-stripe"></div>
-        ${p.img 
+        ${p.img
   ? `<img src="${p.img}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;" id="main-product-img">`
   : `<div class="prod-detail-main-ph">${p.ph}</div>`
+}
 }
       </div>
       <div class="prod-thumbs">
   ${(p.imgs || [p.img]).map((src, i) => `
-    <div class="prod-thumb ${i===0?'active':''}" onclick="swapImage('${src}', this)" style="overflow:hidden;padding:0;">
+    <div class="prod-thumb ${i===0?'active':''}" 
+         onclick="swapImage('${src}', this)" 
+         style="overflow:hidden;padding:0;">
       <img src="${src}" style="width:100%;height:100%;object-fit:cover;" alt="View ${i+1}">
     </div>
   `).join('')}

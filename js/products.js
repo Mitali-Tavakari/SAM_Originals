@@ -19,7 +19,7 @@ const PRODUCTS = [
     care: 'Cold wash, hang dry, iron inside-out',
     ph: 'CAR\nHOODIE',
     color: '#1a1a1a',
-    img: 'images/products/car_hoodie_1.jpg',
+    img: 'images/products/car_hoodie_3.jpg',
     imgs: [
       'images/products/car_hoodie_3.jpg',
       'images/products/car_hoodie_2.jpg',
