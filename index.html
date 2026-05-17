@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAM_Originals — Made in the UAE. Made for Everyone.</title>
+  <meta name="description" content="UAE streetwear rooted in Sharjah and Dubai. Built for every culture that calls this place home. Limited drops. No restocks.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     NAV
+══════════════════════════════════════ -->
+<nav>
+  <div class="nav-logo" onclick="showPage('home')">SAM<span>_</span>ORIGINALS</div>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')"  id="nav-home"  class="active">Home</a></li>
+    <li><a onclick="showPage('shop')"  id="nav-shop">Shop</a></li>
+    <li><a onclick="showPage('drops')" id="nav-drops">Drops</a></li>
+    <li><a onclick="showPage('home')"  id="nav-story">Our Story</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="cart-btn" onclick="openCart()">
+      🛒 Cart
+      <span class="cart-count" id="cart-count">0</span>
+    </button>
+    <button class="shop-drop-btn" onclick="showPage('shop')">Shop Now</button>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════════════════
+     HOME PAGE
+══════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-tag">Drop 01 — Summer 2025</div>
+      <h1 class="hero-h1">Made in<br>the <span class="g">UAE.</span><br>Made for<br>Everyone.</h1>
+      <p class="hero-sub">Streetwear rooted in the streets of Sharjah and Dubai — built for every culture that calls this place home.</p>
+      <div class="hero-btns">
+        <button class="btn-gold" onclick="showPage('shop')">Shop the Drop</button>
+        <button class="btn-ghost" onclick="showPage('drops')">Join the Waitlist</button>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- Ticker -->
+  <div class="ticker">
+    <div class="ticker-inner">
+      <span>SAM_ORIGINALS</span><span class="ticker-dot">◆</span>
+      <span>MADE IN THE UAE</span><span class="ticker-dot">◆</span>
+      <span>LIMITED DROPS</span><span class="ticker-dot">◆</span>
+      <span>ROOTED IN CULTURE</span><span class="ticker-dot">◆</span>
+      <span>GLOBALLY FLUENT</span><span class="ticker-dot">◆</span>
+      <span>EVERY COMMUNITY</span><span class="ticker-dot">◆</span>
+      <!-- Duplicated for seamless loop -->
+      <span>SAM_ORIGINALS</span><span class="ticker-dot">◆</span>
+      <span>MADE IN THE UAE</span><span class="ticker-dot">◆</span>
+      <span>LIMITED DROPS</span><span class="ticker-dot">◆</span>
+      <span>ROOTED IN CULTURE</span><span class="ticker-dot">◆</span>
+      <span>GLOBALLY FLUENT</span><span class="ticker-dot">◆</span>
+      <span>EVERY COMMUNITY</span><span class="ticker-dot">◆</span>
+    </div>
+  </div>
+
+  <!-- Manifesto -->
+  <section class="sec">
+    <div class="manifesto-grid">
+      <div class="m-left">
+        <div class="sec-label">Our Manifesto</div>
+        <h2>WHY<br>WE<br><em>EXIST</em></h2>
+      </div>
+      <div class="m-right">
+        <p>The UAE isn't one culture — it's <strong>200 nationalities living in the same streets, eating from the same shawarma spot, dreaming the same dreams.</strong> Yet most brands still dress one type of person.</p>
+        <p>SAM_Originals was built differently. Every piece is a conversation between cultures — Palestinian roots, Filipino pride, Egyptian hustle, Emirati heritage, South Asian grind. <strong>Not one at the expense of another. All together.</strong></p>
+        <p>We make streetwear for the UAE that actually looks like the UAE.</p>
+        <div class="m-stats">
+          <div><span class="st-n">200+</span><span class="st-l">Nationalities, One Brand</span></div>
+          <div><span class="st-n">100%</span><span class="st-l">UAE-Rooted</span></div>
+          <div><span class="st-n">Drop 01</span><span class="st-l">Coming Soon</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section class="sec" style="background:var(--off-black);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding-top:80px;padding-bottom:80px;">
+    <div class="inner" style="margin-bottom:40px;">
+      <div class="sec-label">Built for All of Us</div>
+      <div class="sec-title">The <span class="g">Community</span></div>
+    </div>
+    <div class="comm-grid">
+      <div class="comm-card"><span class="comm-flag">🇦🇪</span><div class="comm-name">Emirati</div><p class="comm-quote">"This is our land — and our culture is the foundation."</p></div>
+      <div class="comm-card"><span class="comm-flag">🇵🇭</span><div class="comm-name">Filipino</div><p class="comm-quote">"We built this city. We belong in its stories too."</p></div>
+      <div class="comm-card"><span class="comm-flag">🇵🇸</span><div class="comm-name">Palestinian</div><p class="comm-quote">"Pride doesn't need a passport. Just a platform."</p></div>
+      <div class="comm-card"><span class="comm-flag">🇮🇳</span><div class="comm-name">South Asian</div><p class="comm-quote">"The grind is universal. The style is ours."</p></div>
+      <div class="comm-card"><span class="comm-flag">🇪🇬</span><div class="comm-name">Egyptian</div><p class="comm-quote">"From Cairo to Dubai — culture travels with you."</p></div>
+      <div class="comm-card"><span class="comm-flag">🇵🇰</span><div class="comm-name">Pakistani</div><p class="comm-quote">"Two worlds, one wardrobe. This is home now."</p></div>
+      <div class="comm-card"><span class="comm-flag">🇧🇩</span><div class="comm-name">Bangladeshi</div><p class="comm-quote">"We show up every day. Now we show up in style."</p></div>
+      <div class="comm-card" style="background:linear-gradient(135deg,rgba(201,150,58,.07),transparent);border-color:var(--border);"><span class="comm-flag">🌍</span><div class="comm-name">+ 193 More</div><p class="comm-quote">"Every flag. Every story. One UAE."</p></div>
+    </div>
+    <div class="comm-manifesto">
+      <p class="comm-mq">The hoodie is just how we <span>deliver</span> the belonging.</p>
+      <p class="comm-attr">— SAM_Originals, Sharjah</p>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="sec">
+    <div class="inner" style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:16px;">
+      <div>
+        <div class="sec-label">The Collection</div>
+        <div class="sec-title">Featured <span class="g">Pieces</span></div>
+      </div>
+      <button class="btn-ghost" style="padding:12px 28px;" onclick="showPage('shop')">View All →</button>
+    </div>
+    <div class="inner">
+      <div class="products-grid" id="home-products-grid"></div>
+    </div>
+  </section>
+
+</div><!-- /page-home -->
+
+
+<!-- ══════════════════════════════════════
+     SHOP PAGE
+══════════════════════════════════════ -->
+<div class="page" id="page-shop">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <h1>The <span>Shop</span></h1>
+      <p>Limited drops. No restocks. Once it's gone, it's gone.</p>
+    </div>
+  </div>
+  <div class="shop-layout">
+    <div class="shop-filters">
+      <span class="filter-label">Filter:</span>
+      <button class="filter-btn active" onclick="filterProducts('all',this)">All</button>
+      <button class="filter-btn" onclick="filterProducts('drop01',this)">Drop 01</button>
+      <button class="filter-btn" onclick="filterProducts('archive',this)">Archive</button>
+      <div class="filter-sep"></div>
+      <button class="filter-btn" onclick="filterProducts('available',this)">Available</button>
+      <button class="filter-btn" onclick="filterProducts('sold',this)">Sold Out</button>
+      <span class="shop-count" id="shop-count">8 Items</span>
+    </div>
+    <div class="products-grid" id="shop-products-grid"></div>
+  </div>
+</div><!-- /page-shop -->
+
+
+<!-- ══════════════════════════════════════
+     PRODUCT DETAIL PAGE
+══════════════════════════════════════ -->
+<div class="page" id="page-product">
+  <div class="prod-detail-layout" id="product-detail-content"></div>
+  <div class="related-sec" id="related-products-sec"></div>
+</div><!-- /page-product -->
+
+
+<!-- ══════════════════════════════════════
+     DROPS PAGE
+══════════════════════════════════════ -->
+<div class="page" id="page-drops">
+
+  <div class="drop-hero">
+    <div class="drop-hero-inner">
+      <div class="sec-label" style="margin-bottom:0">Drops</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,5vw,56px);letter-spacing:2px;color:var(--white);margin:8px 0;">Next Drop &amp; Archive</div>
+      <div class="drop-hero-bg-text">DROP</div>
+    </div>
+  </div>
+
+  <!-- Upcoming Drop -->
+  <section style="padding:48px 40px;background:var(--off-black);border-bottom:1px solid var(--border);">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="upcoming-drop">
+        <div class="drop-layout-grid">
+          <div>
+            <div class="drop-status"><span class="status-dot"></span>Upcoming</div>
+            <div class="drop-name">DROP <span>02</span><br>UNITY</div>
+            <p class="drop-desc-text">The second drop from SAM_Originals. Rooted in the souks, influenced by the skyline. Five pieces, all limited. This one sells out before it even drops.</p>
+            <div class="countdown-row">
+              <div class="c-block"><span class="c-num" id="d-days">21</span><span class="c-lbl">Days</span></div>
+              <div class="c-sep">:</div>
+              <div class="c-block"><span class="c-num" id="d-hrs">14</span><span class="c-lbl">Hrs</span></div>
+              <div class="c-sep">:</div>
+              <div class="c-block"><span class="c-num" id="d-min">33</span><span class="c-lbl">Min</span></div>
+              <div class="c-sep">:</div>
+              <div class="c-block"><span class="c-num" id="d-sec">07</span><span class="c-lbl">Sec</span></div>
+            </div>
+            <div class="drop-waitlist">
+              <input type="email" id="waitlist-email" placeholder="your@email.com" />
+              <button onclick="joinWaitlist()">Get Early Access</button>
+            </div>
+            <a href="https://wa.me/971504840410" target="_blank"
+               style="display:inline-flex;align-items:center;gap:8px;background:var(--green-dim);border:1px solid rgba(37,209,102,.25);color:var(--green);padding:12px 20px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all .2s;">
+              <svg style="width:16px;height:16px;fill:var(--green);" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+              Notify me on WhatsApp
+            </a>
+          </div>
+          <div class="drop-visual-box">
+            <div class="drop-visual-blur">DROP<br>02</div>
+            <div class="drop-visual-badge">Reveal Coming Soon</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Archive -->
+  <section style="padding:60px 0;">
+    <div style="max-width:1200px;margin:0 auto;padding:0 40px;">
+      <div class="sec-label">Past Drops</div>
+      <div class="sec-title" style="margin-bottom:36px;">Archive</div>
+    </div>
+    <div class="archive-grid" style="padding-top:0;">
+      <div class="archive-card">
+        <div class="archive-img">
+          <div class="archive-img-ph">DROP&#10;01</div>
+          <div class="sold-overlay"><div class="sold-stamp">SOLD OUT</div></div>
+        </div>
+        <div class="archive-info">
+          <div class="archive-drop-num">Drop 01 · Foundation · Feb 2025</div>
+          <div class="archive-name">Foundation Collection</div>
+          <div class="archive-meta">
+            <div class="archive-stat"><strong>5</strong><span>Pieces</span></div>
+            <div class="archive-stat"><strong>48h</strong><span>Sold Out In</span></div>
+            <div class="archive-stat"><strong>150</strong><span>Units Total</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="archive-card" style="border-style:dashed;opacity:.5;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:360px;padding:40px;text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:rgba(201,150,58,.15);letter-spacing:3px;margin-bottom:12px;">DROP 03</div>
+        <div style="font-size:12px;font-weight:300;color:var(--muted);font-style:italic;">Coming 2025</div>
+      </div>
+      <div class="archive-card" style="border-style:dashed;opacity:.5;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:360px;padding:40px;text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:rgba(201,150,58,.15);letter-spacing:3px;margin-bottom:12px;">DROP 04</div>
+        <div style="font-size:12px;font-weight:300;color:var(--muted);font-style:italic;">Coming 2026</div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-drops -->
+
+
+<!-- ══════════════════════════════════════
+     CART DRAWER
+══════════════════════════════════════ -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-header">
+    <div class="cart-title">Your Cart</div>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items-container"></div>
+  <div class="cart-footer" id="cart-footer"></div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     CHECKOUT MODAL
+══════════════════════════════════════ -->
+<div class="modal-overlay" id="checkout-overlay">
+  <div class="modal" id="checkout-modal">
+    <div class="modal-stripe"></div>
+    <div class="modal-header">
+      <div>
+        <div class="modal-title">Checkout</div>
+        <div class="modal-sub">Fill in your details — we'll send your order via WhatsApp</div>
+      </div>
+      <button class="modal-close" onclick="closeCheckout()">✕</button>
+    </div>
+    <div class="modal-body">
+
+      <!-- Delivery Address -->
+      <div class="form-section">
+        <div class="form-section-title">Delivery Address</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name *</label>
+            <input class="form-input" id="f-fname" placeholder="Ahmed" type="text"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name *</label>
+            <input class="form-input" id="f-lname" placeholder="Al Rashidi" type="text"/>
+          </div>
+        </div>
+        <div class="form-row full">
+          <div class="form-group">
+            <label class="form-label">Phone Number *</label>
+            <input class="form-input" id="f-phone" placeholder="+971 50 000 0000" type="tel"/>
+          </div>
+        </div>
+        <div class="form-row full">
+          <div class="form-group">
+            <label class="form-label">Apartment / Villa / Unit *</label>
+            <input class="form-input" id="f-apt" placeholder="Apt 4B, Al Nahda Tower" type="text"/>
+          </div>
+        </div>
+        <div class="form-row full">
+          <div class="form-group">
+            <label class="form-label">Street / Area *</label>
+            <input class="form-input" id="f-street" placeholder="Al Nahda Street, Al Qasimia" type="text"/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Emirate *</label>
+            <select class="form-input" id="f-emirate">
+              <option value="">Select emirate</option>
+              <option>Dubai</option>
+              <option>Sharjah</option>
+              <option>Abu Dhabi</option>
+              <option>Ajman</option>
+              <option>Ras Al Khaimah</option>
+              <option>Fujairah</option>
+              <option>Umm Al Quwain</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Nearest Landmark</label>
+            <input class="form-input" id="f-landmark" placeholder="Near City Centre Sharjah" type="text"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gift Options -->
+      <div class="form-section">
+        <div class="form-section-title">Gift Options</div>
+        <div class="gift-toggle" id="gift-no" onclick="selectGift(false)">
+          <div class="toggle-check"><span class="check-icon">✓</span></div>
+          <div class="toggle-text">
+            <div class="toggle-title">Regular Order</div>
+            <div class="toggle-desc">Standard packaging, delivered to your address</div>
+          </div>
+        </div>
+        <div class="gift-toggle" id="gift-yes" onclick="selectGift(true)">
+          <div class="toggle-check"><span class="check-icon">✓</span></div>
+          <div class="toggle-text">
+            <div class="toggle-title">🎁 Send as a Gift</div>
+            <div class="toggle-desc">Gift wrapped &amp; delivered to a recipient's address</div>
+          </div>
+        </div>
+        <div class="gift-options" id="gift-options">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Recipient's Name *</label>
+              <input class="form-input" id="f-recip" placeholder="Recipient's full name" type="text"/>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Recipient's Phone</label>
+              <input class="form-input" id="f-recip-phone" placeholder="+971 XX XXX XXXX" type="tel"/>
+            </div>
+          </div>
+          <div class="form-row full" style="margin-bottom:0;">
+            <div class="form-group">
+              <label class="form-label">Personalised Message <span style="color:var(--muted);font-size:9px;">(Optional)</span></label>
+              <textarea class="form-input form-textarea" id="f-gift-msg" placeholder="Write something special..."></textarea>
+            </div>
+          </div>
+          <div class="gift-wrap-notice" style="margin-top:12px;">
+            <span class="gwn-icon">✨</span>
+            <span>Your order will be <strong>gift wrapped</strong> and delivered with your personal message included.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="form-section">
+        <div class="form-section-title">Order Summary</div>
+        <div class="order-summary" id="modal-order-summary"></div>
+      </div>
+
+      <button class="whatsapp-checkout-btn" onclick="proceedToWhatsApp()">
+        <svg viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        Complete Order via WhatsApp
+      </button>
+      <p class="checkout-note">You'll be taken to WhatsApp with your full order details pre-filled. Our team will confirm your order and arrange delivery within 24 hours.</p>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     TOAST
+══════════════════════════════════════ -->
+<div class="toast" id="toast"></div>
+
+
+<!-- ══════════════════════════════════════
+     SCRIPTS (order matters)
+══════════════════════════════════════ -->
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
