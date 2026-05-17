@@ -133,10 +133,7 @@ function renderProductDetail(p) {
       ${stockWarn ? `<div class="stock-warning"><div class="stock-dot"></div>Only ${p.stock} left in stock — order soon</div>` : ''}
       ${sold ? `<div class="stock-warning" style="color:var(--muted2);">⚫ This item is sold out</div>` : ''}
       <p class="prod-desc">${p.desc}</p>
-      <div class="size-label">
-        Select Size
-        <span class="size-guide-link" onclick="showToast('Size guide: XS=34-36, S=36-38, M=38-40, L=40-42, XL=42-44, XXL=44-46 (chest in inches)','📏')">Size Guide</span>
-      </div>
+     <div class="size-label">Select Size<span class="size-guide-link" onclick="openSizeChart()">Size Guide</span></div>
       <div class="size-grid" id="size-grid-${p.id}">${sizesHTML}</div>
       <div class="qty-row">
         <span class="qty-label">Qty</span>
@@ -191,6 +188,16 @@ function swapImage(src, thumb) {
   document.getElementById('main-product-img').src = src;
   document.querySelectorAll('.prod-thumb').forEach(t => t.classList.remove('active'));
   thumb.classList.add('active');
+}
+
+function openSizeChart() {
+  document.getElementById('size-chart-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeSizeChart() {
+  document.getElementById('size-chart-overlay').classList.remove('open');
+  document.body.style.overflow = '';
 }
 
 function addToCart(productId) {

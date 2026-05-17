@@ -15,7 +15,7 @@
      NAV
 ══════════════════════════════════════ -->
 <nav>
-  <div class="nav-logo" onclick="showPage('home')">SAM<span>_</span>ORIGINALS</div>
+  <div class="nav-logo" onclick="showPage('home')"><img src="images/products/logo.png" alt=""></div>
   <ul class="nav-links">
     <li><a onclick="showPage('home')"  id="nav-home"  class="active">Home</a></li>
     <li><a onclick="showPage('shop')"  id="nav-shop">Shop</a></li>
@@ -398,6 +398,86 @@
   </div>
 </div>
 
+<!-- SIZE CHART POPUP -->
+<div class="size-chart-overlay" id="size-chart-overlay" onclick="if(event.target===this)closeSizeChart()">
+  <div class="size-chart-modal">
+    <div class="size-chart-top"></div>
+    <div class="size-chart-header">
+      <div class="size-chart-title">Size Guide</div>
+      <button class="size-chart-close" onclick="closeSizeChart()">✕</button>
+    </div>
+    <div class="size-chart-body">
+
+      <p class="size-chart-note">
+        All measurements are in <span>inches</span> and refer to the <span>chest circumference</span>.
+        Measure around the fullest part of your chest, keeping the tape horizontal.
+      </p>
+
+      <!-- TOPS TABLE -->
+      <div class="size-chart-subtitle">Tops — Hoodies & Tees</div>
+      <table class="size-table">
+        <thead>
+          <tr>
+            <th>Size</th>
+            <th>Chest (in)</th>
+            <th>Chest (cm)</th>
+            <th>Length (in)</th>
+            <th>Shoulder (in)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="size-name">XS</td><td>34 – 36</td><td>86 – 91</td><td>27</td><td>16.5</td></tr>
+          <tr><td class="size-name">S</td><td>36 – 38</td><td>91 – 96</td><td>28</td><td>17.5</td></tr>
+          <tr><td class="size-name">M</td><td>38 – 40</td><td>96 – 101</td><td>29</td><td>18.5</td></tr>
+          <tr><td class="size-name">L</td><td>40 – 42</td><td>101 – 106</td><td>30</td><td>19.5</td></tr>
+          <tr><td class="size-name">XL</td><td>42 – 44</td><td>106 – 111</td><td>31</td><td>20.5</td></tr>
+          <tr><td class="size-name">XXL</td><td>44 – 46</td><td>111 – 116</td><td>32</td><td>21.5</td></tr>
+        </tbody>
+      </table>
+
+      <!-- BOTTOMS TABLE -->
+      <div class="size-chart-subtitle">Bottoms — Cargos & Pants</div>
+      <table class="size-table">
+        <thead>
+          <tr>
+            <th>Size</th>
+            <th>Waist (in)</th>
+            <th>Waist (cm)</th>
+            <th>Hip (in)</th>
+            <th>Inseam (in)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="size-name">S</td><td>28 – 30</td><td>71 – 76</td><td>36 – 38</td><td>30</td></tr>
+          <tr><td class="size-name">M</td><td>30 – 32</td><td>76 – 81</td><td>38 – 40</td><td>31</td></tr>
+          <tr><td class="size-name">L</td><td>32 – 34</td><td>81 – 86</td><td>40 – 42</td><td>32</td></tr>
+          <tr><td class="size-name">XL</td><td>34 – 36</td><td>86 – 91</td><td>42 – 44</td><td>32</td></tr>
+        </tbody>
+      </table>
+
+      <div class="size-chart-divider"></div>
+
+      <!-- TIPS -->
+      <div class="size-chart-subtitle">Fit Notes</div>
+      <div class="size-chart-tips">
+        <div class="size-tip"><span class="size-tip-icon">👕</span><span><strong style="color:#f5f0eb;">Hoodies</strong> — All hoodies are oversized fit with dropped shoulders. If you prefer a slimmer look, size down one.</span></div>
+        <div class="size-tip"><span class="size-tip-icon">👔</span><span><strong style="color:#f5f0eb;">Tees</strong> — Boxy and relaxed. True to a streetwear silhouette. Size down if you prefer a more fitted look.</span></div>
+        <div class="size-tip"><span class="size-tip-icon">📏</span><span><strong style="color:#f5f0eb;">Between sizes?</strong> — Always go up. Shrinkage after the first wash is minimal but accounts for about half a size.</span></div>
+      </div>
+
+      <!-- HOW TO MEASURE -->
+      <div class="size-chart-how">
+        <div class="size-chart-how-title">How to Measure</div>
+        <p>
+          <strong style="color:#f5f0eb;">Chest:</strong> Wrap the tape around the fullest part of your chest, under your arms, keeping it parallel to the ground.<br><br>
+          <strong style="color:#f5f0eb;">Waist:</strong> Measure around your natural waistline, just above the hip bone.<br><br>
+          <strong style="color:#f5f0eb;">Still unsure?</strong> Message us on WhatsApp — we'll help you pick the right size before you order.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 <!-- ══════════════════════════════════════
      TOAST
