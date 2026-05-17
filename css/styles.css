@@ -67,13 +67,19 @@ nav {
 }
 
 .nav-logo {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 22px;
-  letter-spacing: 3px;
-  color: var(--white);
-  text-decoration: none;
+  display: block;
+  flex-shrink: 0; /* This tells the navbar: DO NOT squish this container */
   cursor: pointer;
+  text-decoration: none;
 }
+
+.nav-logo img {
+  height: 36px !important; 
+  width: auto !important; /* This is the fix! */
+  object-fit: contain;
+  display: block;
+}
+
 .nav-logo span { color: var(--gold); }
 
 .nav-links {
